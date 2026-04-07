@@ -1,3 +1,5 @@
+// FICHA 03 - DOM e Eventos
+
 // Referências aos elementos do DOM
 
 const appTitle = document.getElementById("app-title");
@@ -6,8 +8,11 @@ const searchInput = document.getElementById("search-input");
 const trackList = document.getElementById("track-list");
 const form = document.getElementById("add-track-form");
 
+// Selecionar e Modificar Elementos
+
 // Exercício 1
 
+console.log("--- Exercício 1 ---");
 appTitle.textContent = "SoundBase";
 
 // Ambos os seletores referem o mesmo elemento
@@ -20,8 +25,11 @@ trackCountEl.textContent = `${catalogue.length} faixas disponíveis`;
 
 // Exercício 3
 
+console.log("--- Exercício 3 ---");
 searchInput.setAttribute("placeholder", "Pesquisar por título ou artista…");
 console.log(searchInput.getAttribute("placeholder"));
+
+// Renderizar Conteúdo com innerHTML
 
 // Exercício 4
 
@@ -84,6 +92,8 @@ const renderCatalogue = (tracks) => {
 
 renderCatalogue(catalogue);
 
+// Eventos
+
 // Estado partilhado entre os handlers de pesquisa e de filtro por género.
 // Permite combinar os dois filtros sem que um sobreponha o outro.
 
@@ -142,6 +152,8 @@ trackList.addEventListener("click", (event) => {
   }
 });
 
+// Formulário
+
 // Exercício 9, 10 e 11
 
 form.addEventListener("submit", (event) => {
@@ -166,6 +178,8 @@ form.addEventListener("submit", (event) => {
   renderCatalogue(getFiltered());
   form.reset();
 });
+
+// Desafios
 
 // Desafio - botões de filtro por género (alínea 14)
 

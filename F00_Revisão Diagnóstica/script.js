@@ -1,5 +1,7 @@
 // FICHA 0 — Revisão Diagnóstica
 
+// Variáveis, tipos de dados e operadores
+
 // Exercício 1 — Variáveis e tipos de dados
 // const para valores que não vão mudar; let para desconto - valor ainda desconhecido
 const nome = "Teclado Mecânico";
@@ -8,6 +10,7 @@ const stock = 14;
 const emPromocao = true;
 let desconto; // declarada sem valor - por omissão é undefined
 
+console.log("--- Exercício 1 ---");
 console.log(typeof nome); // "string"
 console.log(typeof preco); // "number"
 console.log(typeof stock); // "number"
@@ -19,8 +22,11 @@ console.log(typeof desconto); // "undefined"
 // para que possamos chamar toFixed() novamente sem obter "110.650"
 const precoComIVA = parseFloat((preco * 1.23).toFixed(2));
 
+console.log("--- Exercício 2 ---");
 console.log(`${nome} – ${precoComIVA}€ (stock: ${stock})`);
 // Expected: "Teclado Mecânico – 110.65€ (stock: 14)"
+
+// Controlo de fluxo
 
 // Exercício 3 — classificarStock
 function classificarStock(unidades) {
@@ -38,6 +44,7 @@ function classificarStock(unidades) {
 }
 
 // Exercício 4 — Testar classificarStock com pelo menos 4 valores
+console.log("--- Exercício 4 ---");
 console.log(classificarStock(0)); // "Esgotado"
 console.log(classificarStock(3)); // "Stock crítico"
 console.log(classificarStock(14)); // "Stock normal"
@@ -55,10 +62,12 @@ try {
 }
 
 // Exercício 5 — Operador ternário
+console.log("--- Exercício 5 ---");
 const etiqueta = emPromocao ? "Em promoção" : "Preço normal";
 console.log(etiqueta); // "Em promoção"
 
-// ARRAYS E MÉTODOS
+// Arrays e Métodos
+
 const produtos = [
   {
     nome: "Teclado Mecânico",
@@ -100,6 +109,7 @@ const produtos = [
 // Exercício 6 — Imprimir os nomes dos produtos em maiúsculas
 // forEach é a escolha certa aqui: não estamos a construir um novo array,
 // apenas a executar um efeito secundário (imprimir) para cada elemento.
+console.log("--- Exercício 6 ---");
 produtos.forEach((produto) => {
   console.log(produto.nome.toUpperCase());
 });
@@ -116,11 +126,13 @@ function calcularValorStock(arrayProdutos) {
   return total;
 }
 
+console.log("--- Exercício 7 ---");
 calcularValorStock(produtos);
 
 // Exercício 8 — Produtos disponíveis e esgotados
 // filter devolve um novo array — o original não é modificado.
 // produtosDisponiveis é declarado aqui para que o exercício 12 o possa usar.
+console.log("--- Exercício 8 ---");
 const produtosDisponiveis = produtos.filter((p) => p.stock);
 
 console.log(`Produtos disponíveis: ${produtosDisponiveis.length}`);
@@ -140,11 +152,13 @@ function descricaoProduto(produto) {
 }
 
 // Testar com todos os produtos do array
+console.log("--- Exercício 9 ---");
 produtos.forEach((produto) => {
   console.log(descricaoProduto(produto));
 });
 
 // DOM
+
 // Exercício 11 — renderizarProdutos (chamada ao carregar a página)
 function renderizarProdutos(arrayProdutos) {
   const container = document.getElementById("lista-produtos");

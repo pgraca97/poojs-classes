@@ -48,6 +48,7 @@ console.log("--- Exercício 4 ---");
 logTracks("Blinding Lights", "Levitating", "Stay");
 
 // Objetos literais com métodos
+
 // Exercícios 5 e 6: objeto track com métodos
 const track = {
   title: "Blinding Lights",
@@ -111,6 +112,7 @@ for (const key in track) {
 }
 
 // Array de Objetos & Iteração
+
 // Exercício 10: array catalogue
 const catalogue = [
   {
@@ -194,7 +196,7 @@ catalogue.shift(); // remove "Blinding Lights"
 console.log("Catálogo após push + shift:");
 catalogue.forEach((t) => console.log(" -", t.title));
 
-// --- Exercício 14: duração total com forEach ---
+// Exercício 14: duração total com forEach
 console.log("--- Exercício 14 ---");
 
 const totalSeconds = catalogue.reduce((totalDuration, t) => totalDuration + t.duration, 0);
@@ -202,7 +204,8 @@ const totalSeconds = catalogue.reduce((totalDuration, t) => totalDuration + t.du
 console.log(`Total catalogue duration: ${formatDuration(totalSeconds)}`);
 
 // Exercício integrador
-// --- Exercícios 15 e 16: objeto playlist com métodos ---
+
+// Exercícios 15 e 16: objeto playlist com métodos
 const playlist = {
   name: "Late Night Vibes",
   createdBy: "mina_le6",
@@ -251,7 +254,7 @@ const playlist = {
   },
 };
 
-// --- Exercício 17: Testar playlist ---
+// Exercício 17: Testar playlist
 console.log("--- Exercício 17 ---");
 playlist.addTrack(catalogue[0]);
 playlist.addTrack(catalogue[1]);
@@ -266,6 +269,7 @@ console.log(playlist.getTotalDuration());
 playlist.getMostPlayed();
 
 // DESAFIOS
+
 // Desafio 1 (alínea 18): getByGenre
 playlist.getByGenre = function (genre) {
   const result = this.tracks.filter((t) => t.genre === genre);

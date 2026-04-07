@@ -1,15 +1,18 @@
+// FICHA 02 - Métodos de Array
 // soundbase-dados.js é carregado antes deste ficheiro em index.html
 // catalogue, formatDuration, formatPlays e getTrackInfo estão disponíveis globalmente
 
 // filter
 
 // Exercício 1 — Filtrar por género "Pop"
+console.log("--- Exercício 1 ---");
 const popTracks = catalogue.filter((track) => track.genre === "Pop");
 popTracks.forEach((track) => console.log(getTrackInfo(track)));
 console.log("Comprimento do catálogo antes:", catalogue.length);
 console.log("Comprimento do catálogo depois:", catalogue.length); // inalterado
 
 // Exercício 2 — Filtrar por plays > 10 000
+console.log("--- Exercício 2 ---");
 const popularTracks = catalogue.filter((track) => track.plays > 10000);
 console.log(`Faixas populares: ${popularTracks.length}`);
 
@@ -17,6 +20,7 @@ console.log(`Faixas populares: ${popularTracks.length}`);
 const getByGenre = (catalogue, genre) =>
   catalogue.filter((track) => track.genre === genre);
 
+console.log("--- Exercício 3 ---");
 console.log(getByGenre(catalogue, "Jazz").map(getTrackInfo));
 console.log(getByGenre(catalogue, "Indie").map(getTrackInfo));
 console.log(getByGenre(catalogue, "Classical")); // []
@@ -24,10 +28,12 @@ console.log(getByGenre(catalogue, "Classical")); // []
 // map
 
 // Exercício 4 — Extrair títulos
+console.log("--- Exercício 4 ---");
 const trackTitles = catalogue.map((track) => track.title);
 console.log(trackTitles);
 
 // Exercício 5 — Strings de resumo formatadas
+console.log("--- Exercício 5 ---");
 const trackSummaries = catalogue.map(
   (track) =>
     `${track.title} — ${track.artist} (${formatDuration(track.duration)})`,
@@ -35,12 +41,14 @@ const trackSummaries = catalogue.map(
 trackSummaries.forEach((summary) => console.log(summary));
 
 // Exercício 6 — Catálogo reduzido (título + artista)
+console.log("--- Exercício 6 ---");
 const liteCatalogue = catalogue.map(({ title, artist }) => ({ title, artist }));
 console.log(liteCatalogue);
 
 // find e findIndex
 
 // Exercício 7 — Encontrar a primeira faixa de Jazz
+console.log("--- Exercício 7 ---");
 const jazzTrack = catalogue.find((track) => track.genre === "Jazz");
 if (!jazzTrack) {
   console.log("Nenhuma faixa de Jazz encontrada.");
@@ -52,10 +60,12 @@ if (!jazzTrack) {
 const findByTitle = (catalogue, title) =>
   catalogue.find((track) => track.title === title) ?? null;
 
+console.log("--- Exercício 8 ---");
 console.log(findByTitle(catalogue, "Vienna")); // objeto
 console.log(findByTitle(catalogue, "Nonexistent")); // null
 
 // Exercício 9 — findIndex + mutação direta
+console.log("--- Exercício 9 ---");
 const idx = catalogue.findIndex((track) => track.title === "Good Days");
 if (idx !== -1) {
   catalogue[idx].plays += 1000;
@@ -65,16 +75,19 @@ if (idx !== -1) {
 // sort
 
 // Exercício 10 — Ordenar por plays descendente (sort muta — copiar primeiro)
+console.log("--- Exercício 10 ---");
 const byPlaysDesc = [...catalogue].sort((a, b) => b.plays - a.plays);
 byPlaysDesc.forEach((track) => console.log(`${track.title} — ${track.plays}`));
 
 // Exercício 11 — Ordenar por título A → Z
+console.log("--- Exercício 11 ---");
 const byTitleAsc = [...catalogue].sort((a, b) =>
   a.title.localeCompare(b.title),
 );
 byTitleAsc.forEach((track) => console.log(track.title));
 
 // Exercício 12 — Ordenar por duração ascendente, devolver novo array
+console.log("--- Exercício 12 ---");
 const sortByDuration = (catalogue) =>
   [...catalogue].sort((a, b) => a.duration - b.duration);
 
@@ -92,6 +105,7 @@ const searchTracks = (catalogue, query) => {
   );
 };
 
+console.log("--- Exercício 13 ---");
 searchTracks(catalogue, "the").forEach((track) =>
   console.log(getTrackInfo(track)),
 );
@@ -104,6 +118,7 @@ const getTopTracks = (catalogue, genre, n) =>
     .sort((a, b) => b.plays - a.plays)
     .slice(0, n);
 
+console.log("--- Exercício 14 ---");
 getTopTracks(catalogue, "Pop", 3).forEach((track) =>
   console.log(getTrackInfo(track)),
 );
@@ -111,10 +126,12 @@ getTopTracks(catalogue, "Pop", 3).forEach((track) =>
 // Desafios
 
 // Exercício 15 — Total de plays com reduce
+console.log("--- Exercício 15 ---");
 const totalPlays = catalogue.reduce((acc, track) => acc + track.plays, 0);
 console.log(`Total plays: ${totalPlays.toLocaleString("pt-PT")}`);
 
 // Exercício 16 — Encadeamento filter + map + sort
+console.log("--- Exercício 16 ---");
 const hiphopTitles = catalogue
   .filter((track) => track.genre === "Hip-Hop")
   .map((track) => track.title)

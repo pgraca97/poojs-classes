@@ -14,12 +14,15 @@ Ficha complementar focada em `filter`, `map`, `find`, `findIndex` e `sort`, cont
 ## Dúvidas frequentes
 
 **`find` vs `filter` - quando usar cada um?**
+
 `filter` devolve sempre um array (vazio se não houver resultados). `find` devolve o primeiro elemento que satisfaz o critério, ou `undefined`. Usa `find` quando procuras um elemento específico (por id, por título exato). Usa `filter` quando queres todos os que satisfazem uma condição.
 
 **`sort` modifica o array original?**
+
 Sim. `sort()` muta o array - reordena os elementos no lugar. Para ordenar sem modificar o original, cria uma cópia primeiro: `[...catalogue].sort(...)` ou `catalogue.toSorted(...)`.
 
 **`map` devolve sempre um array com o mesmo número de elementos?**
+
 Sim, sempre. `map` transforma cada elemento mas nunca filtra. Para transformar e filtrar ao mesmo tempo, usa `filter` seguido de `map`, ou `reduce`.
 
 ## Para saber mais

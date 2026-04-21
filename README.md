@@ -9,6 +9,7 @@ Soluções das fichas práticas de Programação Orientada a Objetos em JavaScri
 | [F02](F02_Métodos%20de%20Array/) | Métodos de Array | `filter`, `map`, `find`/`findIndex`, `sort`, encadeamento de métodos |
 | [F03](F03_DOM%20e%20Eventos/) | DOM e Eventos | `querySelector`, `innerHTML`, `addEventListener`, delegação de eventos, formulários |
 | [F04](F04_Classes%20e%20Heran%C3%A7a/) | Classes e Herança | classes, campos privados `#`, getters/setters, métodos estáticos, `extends`, `super` |
+| [F05](F05_Soundbase%20Render/) | Renderização Dinâmica | template strings, delegação de eventos, `toSorted`, `localeCompare`, `target`/`currentTarget` |
 
 ## Como usar
 

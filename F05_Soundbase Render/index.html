@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoundBase</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1 id="app-title">SoundBase</h1>
+  </header>
+
+  <main>
+    <div class="toolbar">
+
+      <div id="view-controls">
+        <button class="btn-view active" data-view="cards">Cards</button>
+        <button class="btn-view" data-view="table">Table</button>
+      </div>
+
+      <div id="filter-controls">
+        <button class="btn-filter active" data-genre="all">All</button>
+        <button class="btn-filter" data-genre="Pop">Pop</button>
+        <button class="btn-filter" data-genre="Hip-Hop">Hip-Hop</button>
+        <button class="btn-filter" data-genre="Jazz">Jazz</button>
+        <button class="btn-filter" data-genre="Electronic">Electronic</button>
+        <button class="btn-filter" data-genre="R&B">R&amp;B</button>
+      </div>
+
+      <!-- Desafio 1 — Sort controls -->
+      <select id="sort-controls">
+        <option value="default">Default order</option>
+        <option value="title-asc">By title (A–Z)</option>
+        <option value="plays-desc">By plays (↓)</option>
+        <option value="duration-desc">By duration (↓)</option>
+      </select>
+
+    </div>
+
+    <div id="catalogue-grid"></div>
+
+    <div id="catalogue-table-container" class="hidden"></div>
+
+    <div id="playlist-info" class="hidden"></div>
+
+  </main>
+
+  <div id="modal-overlay" class="hidden">
+    <div id="modal-content"></div>
+  </div>
+
+  <script src="soundbase-dados.js"></script>
+  <script src="soundbase-classes.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

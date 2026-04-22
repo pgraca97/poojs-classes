@@ -34,6 +34,10 @@ Adiciona a classe se não existir no elemento, remove-a se já existir. Com segu
 
 Interface para ler e escrever atributos `data-*` diretamente em JavaScript. `element.dataset.title` lê o atributo `data-title` do HTML. Os valores são sempre strings - `btn.dataset.liked === "true"` (não `=== true`).
 
+**Para que serve `closest` na delegação de eventos?**
+
+Em delegação de eventos, `event.target` pode ser qualquer elemento filho do contentor - um botão, um `span`, o próprio texto. `closest(seletor)` percorre o DOM para cima - o próprio elemento, depois o pai, avô, etc. - e devolve o primeiro que corresponde ao seletor CSS. Não percorre irmãos: se `event.target` for `.btn-like`, `closest(".btn-remove")` devolve `null` porque `.btn-remove` é irmão, não ancestral. Se nenhum ancestral corresponder, devolve `null` - daí o `if (!card) return` logo a seguir.
+
 **Porquê `createElement` em vez de `innerHTML` com input do utilizador?**
 
 `innerHTML` interpreta o valor como HTML. Se um utilizador submeter `<img src=x onerror="alert(1)">` como título de uma faixa, o browser executa esse JavaScript - isto chama-se XSS (Cross-Site Scripting). `createElement` com `textContent` trata o valor como texto simples e nunca como HTML, eliminando o problema. Para projetos que não podem evitar `innerHTML`, a abordagem padrão é usar uma biblioteca de sanitização como [DOMPurify](https://github.com/cure53/DOMPurify) antes de atribuir ao `innerHTML`.

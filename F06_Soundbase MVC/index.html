@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>SoundBase</title>
+    <link
+      rel="stylesheet"
+      href="css/style.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 id="app-title">SoundBase</h1>
+    </header>
+
+    <main>
+      <div class="toolbar">
+        <div class="toolbar-row toolbar-row-top">
+          <div id="view-controls">
+              <!-- Botões de view serão inseridos dinamicamente aqui -->
+          </div>
+
+          <div id="search-controls">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search by title or artist…"
+            />
+            <button id="btn-search">Search</button>
+          </div>
+        </div>
+
+        <div class="toolbar-row toolbar-row-bottom">
+          <div id="filter-controls">
+             <!-- Filtros serão inseridos dinamicamente aqui -->
+          </div>
+
+          <select id="sort-controls">
+            <!-- Ordenações inseridas dinamicamente -->
+          </select>
+        </div>
+      </div>
+
+      <div id="catalogue-grid"></div>
+      <div
+        id="catalogue-table-container"
+        class="hidden"
+      ></div>
+      <div
+        id="playlist-info"
+        class="hidden"
+      ></div>
+
+      <!-- Desafio: Recently Played -->
+      <div
+        id="recently-played"
+        class="hidden"
+      ></div>
+    </main>
+
+    <div
+      id="modal-overlay"
+      class="hidden"
+    >
+      <div id="modal-content"></div>
+    </div>
+
+    <script
+      type="module"
+      src="js/app.js"
+    ></script>
+  </body>
+</html>
+

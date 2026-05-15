@@ -11,6 +11,7 @@ Soluções das fichas práticas de Programação Orientada a Objetos em JavaScri
 | [F04](F04_Classes%20e%20Heran%C3%A7a/) | Classes e Herança | classes, campos privados `#`, getters/setters, métodos estáticos, `extends`, `super` |
 | [F05](F05_Soundbase%20Render/) | Renderização Dinâmica | template strings, delegação de eventos, `toSorted`, `localeCompare`, `target`/`currentTarget` |
 | [F06](F06_Soundbase%20MVC/) | Modularização e MVC | ES Modules, `import`/`export`, `export default` vs named, `URLSearchParams`, `history.replaceState`, callbacks View-Controller |
+| [F07](F07_Soundbase%20Auth/) | Autenticação e Controlo de Acesso | `json-server-auth`, camada de serviço, `fetch`/async-await, JWT em `localStorage`, SPA com injeção dinâmica em `#app`, role-based access, dynamic `import`, hash routing com guards |
 
 ## Como usar
 

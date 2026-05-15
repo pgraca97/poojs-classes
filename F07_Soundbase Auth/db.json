@@ -1,0 +1,82 @@
+{
+  "users": [
+    {
+      "email": "teste1@example.com",
+      "password": "$2a$10$8rHRc5pW5gN1kHFv3ahKluSG8NikAtwKelY7keqK0g4HPwD/uUiYu",
+      "role": "admin",
+      "id": 1
+    },
+    {
+      "email": "teste2@example.com",
+      "password": "$2a$10$RxcnqrqwaqJu0OXJrEYS6uxAm0Nvc6hDB/mt06.qz9eNB/NyRnzqy",
+      "role": "user",
+      "id": 2
+    }
+  ],
+  "tracks": [
+    {
+      "id": 3,
+      "title": "HUMBLE.",
+      "artist": "Kendrick Lamar",
+      "duration": 177,
+      "genre": "Hip-Hop",
+      "plays": 12500
+    },
+    {
+      "id": 4,
+      "title": "God's Plan",
+      "artist": "Drake",
+      "duration": 198,
+      "genre": "Hip-Hop",
+      "plays": 9800
+    },
+    {
+      "id": 5,
+      "title": "Take Five",
+      "artist": "Dave Brubeck",
+      "duration": 324,
+      "genre": "Jazz",
+      "plays": 3100
+    },
+    {
+      "id": 6,
+      "title": "So What",
+      "artist": "Miles Davis",
+      "duration": 565,
+      "genre": "Jazz",
+      "plays": 2400
+    },
+    {
+      "id": 7,
+      "title": "Strobe",
+      "artist": "deadmau5",
+      "duration": 602,
+      "genre": "Electronic",
+      "plays": 5500
+    },
+    {
+      "id": 8,
+      "title": "One More Time",
+      "artist": "Daft Punk",
+      "duration": 320,
+      "genre": "Electronic",
+      "plays": 7100
+    },
+    {
+      "id": 9,
+      "title": "Nights",
+      "artist": "Frank Ocean",
+      "duration": 307,
+      "genre": "R&B",
+      "plays": 7300
+    },
+    {
+      "id": 10,
+      "title": "Redbone",
+      "artist": "Childish Gambino",
+      "duration": 326,
+      "genre": "R&B",
+      "plays": 4900
+    }
+  ]
+}
